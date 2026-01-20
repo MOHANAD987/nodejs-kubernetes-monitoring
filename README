@@ -1,12 +1,24 @@
 # 🚀 NodeJS Application Monitoring on Kubernetes  
 ### **Enterprise-Grade Observability: Prometheus • Grafana • Alertmanager • Slack**
 
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white) 
-![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white) 
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white) 
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) 
-![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-plain.svg" width="35" height="35"></td>
+    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/prometheus/prometheus-original.svg" width="35" height="35"></td>
+    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg" width="35" height="35"></td>
+    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="35" height="35"></td>
+    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="35" height="35"></td>
+    <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/slack/slack-original.svg" width="35" height="35"></td>
+  </tr>
+  <tr>
+    <td><b>K8s</b></td>
+    <td><b>Prometheus</b></td>
+    <td><b>Grafana</b></td>
+    <td><b>Docker</b></td>
+    <td><b>NodeJS</b></td>
+    <td><b>Slack</b></td>
+  </tr>
+</table>
 
 ---
 ---
