@@ -1,6 +1,18 @@
 # 🚀 NodeJS Application Monitoring on Kubernetes  
 ### **Enterprise-Grade Observability: Prometheus • Grafana • Alertmanager • Slack**
 
+![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white) ![Prometheus](https://img.shields.io/badge/Prometheus-%23E6522C.svg?style=for-the-badge&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-%23F46800.svg?style=for-the-badge&logo=grafana&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%232496ED.svg?style=for-the-badge&logo=docker&logoColor=white) ![Node JS](https://img.shields.io/badge/node.js-%23339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Slack](https://img.shields.io/badge/Slack-%234A154B.svg?style=for-the-badge&logo=slack&logoColor=white)
+
+---
+
+
+
+
+
+
+# 🚀 NodeJS Application Monitoring on Kubernetes  
+### **Enterprise-Grade Observability: Prometheus • Grafana • Alertmanager • Slack**
+
 <p align="center">
   <img src="https://img.shields.io/badge/Kubernetes-v1.30-326ce5?style=for-the-badge&logo=kubernetes&logoColor=white" />
   <img src="https://img.shields.io/badge/Prometheus-Monitoring-e6522c?style=for-the-badge&logo=prometheus&logoColor=white" />
