@@ -1,0 +1,253 @@
+# 🚀 NodeJS Application Monitoring on Kubernetes  
+### Prometheus • Grafana • Alertmanager • Slack
+
+![Kubernetes](https://img.shields.io/badge/Kubernetes-v1.30-blue)
+![Prometheus](https://img.shields.io/badge/Prometheus-Monitoring-orange)
+![Grafana](https://img.shields.io/badge/Grafana-Dashboards-yellow)
+![Docker](https://img.shields.io/badge/Docker-Containerization-blue)
+![NodeJS](https://img.shields.io/badge/NodeJS-Application-green)
+
+
+---
+
+
+## 📌 Project Overview
+
+This project is a **production-oriented DevOps capstone** that demonstrates how to:
+
+- Deploy a **NodeJS application** on Kubernetes.
+- Expose **custom application metrics** using Prometheus client.
+- Collect **cluster & application metrics** via Prometheus.
+- Visualize metrics using **Grafana dashboards**.
+- Configure **Alertmanager** to send alerts to **Slack**.
+- Automate Kubernetes cluster setup using **kubeadm scripts**.
+
+The project follows **real-world monitoring and observability best practices** used in production environments.
+
+
+---
+
+
+## 🏗️ System Architecture
+
+### High-Level Architecture
+
+![System Architecture](architecture/system-architecture.png)
+
+### Monitoring & Alerting Flow
+
+![Monitoring Flow](architecture/monitoring-flow.png)  
+![Alerting Flow](architecture/alerting-flow.png)
+
+
+---
+
+
+## 🛠️ Technologies Used
+
+| Component | Technology |
+|---------|------------|
+| Containerization | Docker |
+| Orchestration | Kubernetes (kubeadm) |
+| Application | NodeJS (Express) |
+| Metrics | Prometheus |
+| Visualization | Grafana |
+| Alerting | Alertmanager |
+| Notifications | Slack Webhook |
+| OS | Ubuntu Linux |
+
+
+---
+
+
+## 📂 Project Structure
+
+```text
+nodejs-k8s-monitoring/
+│
+├── app/                          # NodeJS application
+│   ├── index.js
+│   └── Dockerfile
+│
+├── k8s/                          # Kubernetes manifests
+│   ├── app/
+│   │   ├── nodejs-app.yaml
+│   │   └── nodejs-svc.yaml
+│   │
+│   └── monitoring/
+│       ├── nodejs-monitor-svc.yaml
+│       ├── nodejs-rule.yaml
+│       ├── nodejs-alert-manager.yaml
+│       └── slack-secret.yaml
+│
+├── scripts/                      # Automation scripts
+│   ├── send_requests.sh
+│   └── kubeadm/
+│       ├── 01-install-k8s-master.sh
+│       ├── 02-install-k8s-node1.sh
+│       └── 03-install-k8s-node2.sh
+│
+├── screenshots/                  # Execution proof
+│   
+│   
+│  
+│
+├── architecture/                 # Architecture diagrams
+│   
+│   
+│
+└── README.md
+```
+
+
+---
+
+
+🚀 Deployment Guide
+1️⃣ Kubernetes Cluster Setup (kubeadm)
+
+Run the following scripts on each node:
+
+```bash
+scripts/kubeadm/01-install-k8s-master.sh
+scripts/kubeadm/02-install-k8s-node1.sh
+scripts/kubeadm/03-install-k8s-node2.sh
+```
+
+
+2️⃣ Build & Push NodeJS Image
+
+```bash
+docker build -t <dockerhub-username>/nodejs-app:v1 .
+docker push <dockerhub-username>/nodejs-app:v1
+```
+
+
+3️⃣ Deploy NodeJS Application
+
+```bash
+kubectl apply -f k8s/app/nodejs-app.yaml
+kubectl apply -f k8s/app/nodejs-svc.yaml
+```
+
+
+4️⃣ Deploy Monitoring Stack
+
+```bash
+kubectl apply -f k8s/monitoring/
+```
+
+
+5️⃣ Grafana Dashboards
+
+-Connect Grafana to Prometheus datasource.
+
+-Import dashboards for:
+
+*Node metrics
+
+*Pod CPU / Memory
+
+*Application metrics
+
+
+
+6️⃣ Alert Testing & Slack Notifications
+
+Generate traffic using:
+
+```bash
+scripts/send_requests.sh
+```
+
+
+
+
+---
+
+
+
+📊 Metrics Exposed
+
+-Application Metrics:
+
+http_requests_root_total
+
+Default NodeJS process metrics
+
+
+
+-Kubernetes Metrics:
+
+Pod CPU & Memory
+
+Container restarts
+
+Node resource usage
+
+
+
+
+---
+
+
+🔔 Alerting Rules
+
+Example alert:
+
+```bash
+alert: HighRequestRate_NodeJS
+expr: rate(http_requests_root_total[5m]) > 10
+```
+Triggers Slack notification when request rate exceeds threshold.
+
+
+
+
+---
+
+
+
+🎯 Why This Project Matters
+
+This project demonstrates:
+
+✔ Real-world Kubernetes monitoring
+✔ Application instrumentation best practices
+✔ Alerting & incident awareness
+✔ Production-ready DevOps mindset
+✔ Clean architecture & documentation
+
+
+
+
+
+---
+
+
+
+
+
+🚀 Future Enhancements
+
+-Add Helm charts
+
+-Enable HPA based on custom metrics
+
+-Add TLS & Ingress
+
+-Centralized logging with Loki
+
+
+
+
+---
+
+
+
+
+
+👨‍💻 Author
+
+Mohanad Faisal
+DevOps Engineer
