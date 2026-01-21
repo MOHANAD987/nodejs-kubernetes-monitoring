@@ -44,11 +44,11 @@ This project is a **production-oriented DevOps capstone** that demonstrates how 
 ## 🏗️ System Architecture
 
 ### 🔹 High-Level Architecture
-![System Architecture](architecture/system-architecture.png)
+![Architecture](architecture/)
 
-### 🔹 Monitoring & Alerting Flow
-![Monitoring Flow](architecture/monitoring-flow.png)
-![Alerting Flow](architecture/alerting-flow.png)
+### 🔹 screenshots
+![ screenshots](screenshots/)
+
 
 ---
 
